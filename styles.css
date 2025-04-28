@@ -1,0 +1,83 @@
+/* reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 100%; height: 100%;
+  font-family: monospace;
+}
+
+/* common screens */
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+.hidden { display: none; }
+
+/* Passcode input */
+#passcode-screen input {
+  padding: 0.5em;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* specifically make loading black */
+#loading-screen {
+  background: #000;
+}
+
+/* Matrix canvas */
+#matrix-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: block;
+}
+
+/* ACCESS GRANTED banner (in loading) */
+.access-granted {
+  font-size: 3em;
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
+  z-index: 1;
+}
+
+/* Denied screen */
+#denied-screen {
+  background: #300;
+  color: #f00;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Party page styling */
+#party-screen {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 2em;
+}
+
+/* New party image */
+#party-image {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.rsvp button {
+  margin: 0.5em;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+}
+.heads-container {
+  margin-top: 1em;
+  font-size: 2em;
+  display: flex;
+  gap: 0.5em;
+}

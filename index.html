@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Birthday Party Access</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Passcode Screen -->
+<div id="passcode-screen" class="screen">
+    <h1>Enter Passcode</h1>
+    <label for="passcode-input"></label><input type="password" id="passcode-input" placeholder="Passcode" />
+    <button id="submit-passcode">Submit</button>
+</div>
+
+<!-- Matrix Loading Screen -->
+<div id="loading-screen" class="screen hidden">
+    <canvas id="matrix-canvas"></canvas>
+    <div id="access-granted" class="access-granted hidden">ACCESS GRANTED</div>
+    <audio id="matrix-audio" src="matrix_music.mp3" preload="auto"></audio>
+</div>
+
+<!-- Access Denied Screen -->
+<div id="denied-screen" class="screen hidden">
+    <h1>ACCESS DENIED</h1>
+    <button id="retry-button">Try Again</button>
+</div>
+
+<!-- Party Details Screen -->
+<div id="party-screen" class="screen hidden">
+    <img id="party-image" src="kissoflife.jpg" alt="Birthday Party" />
+
+    <h1>🎉 You're Invited! Pregame/Bars 🎉</h1>
+    <h1>Drinks provided / feel free to bring more</h1>
+    <p><strong>Date:</strong> May 3, 2025</p>
+    <p><strong>Time:</strong> 8:00 PM</p>
+    <p><strong>Location:</strong> 380 W Washington Apt 505</p>
+
+    <div class="rsvp">
+        <button id="attend-btn">🎈 Attend</button>
+        <button id="decline-btn">🚫 Not Attending</button>
+    </div>
+
+    <div class="heads-container">
+        <div id="attend-heads"></div>
+        <div id="decline-heads"></div>
+    </div>
+
+    <!-- loop will make it restart automatically -->
+    <audio id="party-audio" src="kiss_of_life_sticky.mp3" preload="auto" loop></audio>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
